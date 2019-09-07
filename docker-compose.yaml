@@ -19,4 +19,10 @@ services:
           ports:
                   - target: 8080
                     published: 8080
-          
+  client:
+          image: benm96/paclient:v1
+          depends_on:
+                  - server
+          ports:
+                  - target: 3000
+                    published: 3000
