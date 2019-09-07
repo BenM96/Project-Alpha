@@ -26,3 +26,11 @@ services:
           ports:
                   - target: 3000
                     published: 3000
+  nginx:
+          image: nginx:latest
+          ports:
+                  - target: 80
+                    published: 80
+          depends_on:
+                  - server
+                  - client
