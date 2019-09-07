@@ -1,3 +1,4 @@
-#Very similar to the springboot hello world Dockerfile
-
-#try to use a multi stage file
+FROM java:8
+WORKDIR éapp
+copy ./.mvn/wrapper/maven-wrapper.jar ./server.jar
+ENTRYPOINT ["/usr/bin/java", "-jar", "server.jar"]
