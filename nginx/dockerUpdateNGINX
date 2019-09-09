@@ -1,0 +1,6 @@
+echo "updating NGINX for project Alpha"
+read -p "what version number do you want" vn
+echo $vn
+docker build -t benm96/panginx:$vn .
+docker push benm96/panginx:$vn
+echo "done"
