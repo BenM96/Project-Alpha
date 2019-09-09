@@ -29,7 +29,7 @@ services:
                   - target: 3000
                     published: 3000
   nginx:
-          image: benm96/nginx:pa
+          image: benm96/nginx:latest
           ports:
                   - target: 80
                     published: 80
