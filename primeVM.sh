@@ -9,5 +9,9 @@ curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add
 sudo add-apt-repository "deb http://apt.kubernetes.io/ kubernetes-xenial main"
 sudo apt-get update
 sudo apt-get install -y kubeadm kubelet kubectl kubernetes-cni
+sudo kubeadm init
+mkdir -p $HOME/.kube
+sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+sudo chown $(id -u):$(id -g) $HOME/.kube/config
 sudo docker-compose pull
 echo "finnished, restart shell to get full permisions"
