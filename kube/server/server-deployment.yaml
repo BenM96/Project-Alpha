@@ -1,0 +1,12 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+        name: server
+spec:
+        replicas: 1
+        spec:
+                containers:
+                        - name: server
+                          image: docker.io/benm96/paserver:v1
+                          ports:
+                                  containerPort: 8080
